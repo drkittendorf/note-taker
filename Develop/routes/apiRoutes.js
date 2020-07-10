@@ -4,9 +4,7 @@
 // These data sources hold arrays of information on table-data, waitinglist, etc.
 // ===============================================================================
 
-const tableData = require("../db/notesData");
-// var waitListData = require("../data/waitinglistData");
-
+const notesData = require("../db/db.JSON"); //had notesData
 
 // ===============================================================================
 // ROUTING
@@ -19,14 +17,11 @@ module.exports = function(app) {
   // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
   // ---------------------------------------------------------------------------
 
-  app.get("/api/notes", function(req, res) {
+  app.get("../db/db.JSON", function(req, res) {
     res.json(notesData);
   });
 
-  // app.get("/api/waitlist", function(req, res) {
-  //   res.json(waitListData);
-  // });
-
+  
   // API POST Requests
   // Below code handles when a user submits a form and thus submits data to the server.
   // In each of the below cases, when a user submits form data (a JSON object)
@@ -35,16 +30,14 @@ module.exports = function(app) {
   // Then the server saves the data to the tableData array)
   // ---------------------------------------------------------------------------
 
-  app.post("/api/notes", function(req, res) {
+  app.post("../db/db.JSON", function (req, res) {
     // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
     // It will do this by sending out the value "true" have a table
     // req.body is available since we're using the body parsing middleware
     if (notesData.length < 5) {
       notesData.push(req.body);
       res.json(true);
-    }
-    else {
-      // waitListData.push(req.body);
+    } else {
       res.json(false);
     }
   });
@@ -56,8 +49,7 @@ module.exports = function(app) {
   app.post("/api/clear", function(req, res) {
     // Empty out the arrays of data
     notesData.length = 0;
-    // waitListData.length = 0;
-
+    
     res.json({ ok: true });
   });
 };

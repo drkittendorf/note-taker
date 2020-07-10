@@ -15,7 +15,7 @@
       integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
 
   <body>
@@ -48,96 +48,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./assets/js/index.js"></script>
   </body>
-
-  <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS LOADED FROM OUR SERVER -->
-  <!-- <script type="text/javascript">
-    // In this code, jQuery is used to "download" the data from our server
-    // We then dynamically display this content in our table. This is very similar to the group projects you just completed.
-    // It's also very similar to the NYT search application. In fact, I copied a ton of code from there.
-
-    function runNotesQuery() {
-      // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
-      $.ajax({ url: "./api/notes", method: "GET" }).then(function (notesData) {
-        // Here we then log the tableData to console, where it will show up as an object.
-        console.log(notesData);
-        console.log("------------------------------------");
-
-        // Loop through and display each of the customers
-        for (let i = 0; i < notesData.length; i++) {
-          // Get a reference to the tableList element and populate it with tables
-          const notesList = $(".note-title"); //#notesList from tableList
-
-          // Then display the fields in the HTML (Section Name, Date, URL)
-          let listItem = $("<li class='list-group-item mt-4'>");
-
-          listItem.append(
-            $("<h2>").text("Note Title" + notesData[i].note - title),
-            $("<hr>"),
-            $("<h2>").text("Note Text" + notesData[i].noteText)
-            // $("<h2>").text("Name: " + notesData[i].customerName),
-            // $("<h2>").text("Email: " + notesData[i].customerEmail),
-            // $("<h2>").text("Phone: " + notesData[i].phoneNumber)
-          );
-
-          // const $noteTitle = $(".note-title");
-          // const $noteText = $(".note-textarea");
-          // const $saveNoteBtn = $(".save-note");
-          // const $newNoteBtn = $(".new-note");
-          // const $noteList = $(".list-container .list-group");
-          notesList.append(listItem);
-        }
-      });
-    }
-
-    // function runWaitListQuery() {
-
-    //   // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
-    //   $.ajax({ url: "/api/waitlist", method: "GET" })
-    //     .then(function(waitData) {
-
-    //       // Here we then log the waitlistData to console, where it will show up as an object.
-    //       console.log(waitData);
-    //       console.log("------------------------------------");
-
-    //       // Loop through and display each of the customers
-    //       for (let i = 0; i < waitData.length; i++) {
-
-    //         // Get a reference to the waitList element and populate it with tables
-    //         let waitList = $("#waitList");
-
-    //         // Then display the fields in the HTML (Section Name, Date, URL)
-    //         let listItem = $("<li class='list-group-item mt-4'>");
-
-    //         listItem.append(
-    //           $("<h2>").text("Table #" + (i + 1)),
-    //           $("<hr>"),
-    //           $("<h2>").text("ID: " + waitData[i].customerID),
-    //           $("<h2>").text("Name: " + waitData[i].customerName),
-    //           $("<h2>").text("Email: " + waitData[i].customerEmail),
-    //           $("<h2>").text("Phone: " + waitData[i].phoneNumber)
-    //         );
-
-    //         waitList.append(listItem);
-    //       }
-    //     });
-    // }
-
-    // This function resets all of the data in our tables. This is intended to let you restart a demo.
-    // function clearTable() {
-    //   alert("Clearing...");
-
-    //   // Clear the tables on the server and then empty the elements on the client
-    //   $.ajax({ url: "/api/clear", method: "POST" }).then(function() {
-    //     $("#waitList").empty();
-    //     $("#tableList").empty();
-    //   });
-    // }
-
-    // $("#clear").on("click", clearTable);
-
-    // Run Queries!
-    // ==========================================
-    runNotesQuery();
-    // runWaitListQuery();
-  </script> -->
 </html>
