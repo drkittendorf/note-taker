@@ -1,3 +1,4 @@
+
 const $noteTitle = $(".note-title");
 const $noteText = $(".note-textarea");
 const $saveNoteBtn = $(".save-note");
@@ -10,7 +11,7 @@ let activeNote = {};
 // A function for getting all notes from the db
 const getNotes = () => {
   return $.ajax({
-    url: "./api/notes",
+    url: "/api/notes",
     method: "GET",
   });
 };
