@@ -12,7 +12,7 @@ module.exports = function (app) {
     req.body.id = uuid();
     //push new note to notes array and rewrite array
     notes.push(req.body);
-    fs.writeFile('./db/db.json',JSON.stringify(notes), function (err) {
+    fs.writeFile('./db/db.json', JSON.stringify(notes), function (err) {
       if (err) throw err;
     });
     res.json(req.body);
@@ -27,7 +27,7 @@ module.exports = function (app) {
       }
     }
 
-    notes = notes.filter(getId);
+    notes = notes.filter(findId);
     //Delete and rewrite db.json file with new notes array
     fs.writeFile('./db/db.json', JSON.stringify(notes), function (err) {
       if (err) throw err;
