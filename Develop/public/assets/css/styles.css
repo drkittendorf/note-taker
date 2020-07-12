@@ -3,9 +3,10 @@
   font: 1rem;
 }
 
+
 html,
 body {
-  height: 100%;
+  height: 90vh;
   margin: 0;
   padding: 0;
 }
@@ -80,3 +81,5 @@ body {
   padding: 20px;
   cursor: pointer;
 }
+
+
