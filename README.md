@@ -1,7 +1,8 @@
 ## 11 Note Taker
 
 ## App URL
-https://drkittendorf.github.io/11-note-taker/
+https://drkittendorf.github.io/11-note-taker/ <br>
+https://frozen-mesa-87445.herokuapp.com/
 
 # USER STORY
 AS A user, I want to be able to write and save notes<br>
@@ -17,6 +18,9 @@ Application allows users to view previously saved notes.
 Application allows users to delete previously saved notes.
 
 ## Application Screenshots
-![screenshot1](Develop\public\assets\notetakerscreenshot.png)
-![screenshot2](Develop\public\assets\notetakerscreenshot-index.png)
+![screenshot1](public\assets\notetakerscreenshot.png)
+![screenshot2](public\assets\notetakerscreenshot-index.png)
+
+
+
 
