@@ -1,4 +1,10 @@
-html, body {
+:root {
+  padding: 0;
+  font: 1rem;
+}
+
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -15,7 +21,12 @@ html, body {
   cursor: pointer;
 }
 
-.note-textarea, .note-title {
+.icons:hover {
+  font-size: 2rem;
+}
+
+.note-textarea,
+.note-title {
   color: #000000;
   width: 100%;
   outline: none;
@@ -34,7 +45,8 @@ html, body {
   font-size: 3rem;
 }
 
-.note-title:read-only, .note-textarea:read-only {
+.note-title:read-only,
+.note-textarea:read-only {
   color: #757575;
 }
 

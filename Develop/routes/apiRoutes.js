@@ -1,55 +1,40 @@
-// ===============================================================================
-// LOAD DATA
-// We are linking our routes to a series of "data" sources.
-// These data sources hold arrays of information on table-data, waitinglist, etc.
-// ===============================================================================
+let notes = require("../db/db.json");
+const { uuid } = require('uuidv4');
+const fs = require('fs');
 
-const notesData = require("../db/db.JSON"); //had notesData
-
-// ===============================================================================
-// ROUTING
-// ===============================================================================
-
-module.exports = function(app) {
-  // API GET Requests
-  // Below code handles when users "visit" a page.
-  // In each of the below cases when a user visits a link
-  // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
-  // ---------------------------------------------------------------------------
-
-  app.get("../db/db.JSON", function(req, res) {
-    res.json(notesData);
+module.exports = function (app) {
+  app.get("/api/notes", function (req, res) {
+    res.json(notes);
   });
 
-  
-  // API POST Requests
-  // Below code handles when a user submits a form and thus submits data to the server.
-  // In each of the below cases, when a user submits form data (a JSON object)
-  // ...the JSON is pushed to the appropriate JavaScript array
-  // (ex. User fills out a reservation request... this data is then sent to the server...
-  // Then the server saves the data to the tableData array)
-  // ---------------------------------------------------------------------------
+  app.post("/api/notes", function (req, res) {
+    //assign each new note a unique id
+    req.body.id = uuid();
+    //push new note to notes array and write new array over old one in db.json file
+    notes.push(req.body);
+    fs.writeFile('./db/db.json', JSON.stringify(notes), function (err) {
+      if (err) throw err;
+    });
+    res.json(req.body);
+  });
 
-  app.post("../db/db.JSON", function (req, res) {
-    // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-    // It will do this by sending out the value "true" have a table
-    // req.body is available since we're using the body parsing middleware
-    if (notesData.length < 5) {
-      notesData.push(req.body);
-      res.json(true);
-    } else {
-      res.json(false);
+  app.delete('/api/notes/:id', function (req, res) {
+    //functions to identify and remove note with id requested to delete
+    //identify requested note to delete
+    let findId = (noteObject) => {
+      if (noteObject.id != req.params.id) {
+        return true
+      } else {
+        return false
+      }
     }
-  });
+    //filter requested note out of notes array
+    notes = notes.filter(findId);
+    //Rewrite db.json file with new notes array (after deletion)
+    fs.writeFile('./db/db.json', JSON.stringify(notes), function (err) {
+      if (err) throw err;
+    });
 
-  // ---------------------------------------------------------------------------
-  // I added this below code so you could clear out the table while working with the functionality.
-  // Don"t worry about it!
-
-  app.post("/api/clear", function(req, res) {
-    // Empty out the arrays of data
-    notesData.length = 0;
-    
-    res.json({ ok: true });
-  });
-};
+    res.send('Got a DELETE request at /api/notes/:id')
+  })
+}
