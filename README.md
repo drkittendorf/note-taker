@@ -36,9 +36,13 @@ Dale Kittendorf
 ---
 
 ## USER STORY
-AS A user, I want to be able to write and save notes<br>
-I WANT to be able to delete notes I've written before<br>
-SO THAT I can organize my thoughts and keep track of tasks I need to complete<br>
+- AS A user, I want to be able to write and save notes
+- I WANT to be able to delete notes I've written before
+- SO THAT I can organize my thoughts and keep track of tasks I need to complete
+
+<br> 
+
+---
 
 ## REFERENCE LINKS
 
@@ -103,9 +107,9 @@ The code in this project is licensed under MIT license.
 ## SCREENSHOTS AND VIDEO
 
 - ### SCREENSHOT(S)  
-![screenshot1](public\assets\notetakerscreenshot.png)
+![screenshot1](public/assets/notetakerscreenshot.png)
 
-![screenshot2](public\assets\notetakerscreenshot-index.png)
+![screenshot2](public/assets/notetakerscreenshot-index.png)
 <br>
 
 - ### VIDEO
