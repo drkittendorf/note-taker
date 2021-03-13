@@ -1,6 +1,7 @@
 let notesDb = require('../db/db.json');
 const { uuid } = require('uuidv4');
 const fs = require('fs');
+
 // api/notes hits the notes.html via htmlRoutes
 module.exports = function (app) {
   app.get('/api/notes', function (req, res) {
