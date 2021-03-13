@@ -1,4 +1,4 @@
-# DALE'S Note Taker APP
+# DALE'S NOTE TAKER APP
 
 ### TABLE OF CONTENTS
 
@@ -86,6 +86,7 @@ The dependencies listed below are all the core NPM packages used throughout the 
 For `future` development, I would like to incorporate the following `enhancements`:
 
 - Update HEROKU link name.
+- Add some style
 - 
 
 
