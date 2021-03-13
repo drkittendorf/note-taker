@@ -104,6 +104,7 @@ The code in this project is licensed under MIT license.
 
 - ### SCREENSHOT(S)  
 ![screenshot1](public\assets\notetakerscreenshot.png)
+
 ![screenshot2](public\assets\notetakerscreenshot-index.png)
 <br>
 
