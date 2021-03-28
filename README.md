@@ -7,7 +7,7 @@
 - [USER STORY](#USER-STORY)
 - [REFERENCE LINKS](#REFERENCE-LINKS)
   - [Dale's Note Taker Application :: Live Link](https://frozen-mesa-87445.herokuapp.com/)
-  - [Dale's Note Taker Application :: GitHub Repo](https://drkittendorf.github.io/11-note-taker/)
+  - [Dale's Note Taker Application :: GitHub Repo](https://drkittendorf.github.io/note-taker/)
 - [LANGUAGES AND TOOLS](#LANGUAGES-AND-TOOLS)
 - [CORE PROJECT TECHNOLOGIES](#CORE-PROJECT-TECHNOLOGIES)
 - [CORE NODE DEPENDENCIES](#CORE-NODE-DEPENDENCIES)
@@ -48,7 +48,7 @@ Dale Kittendorf
 
 Link to **Dale's Note Taker App** deployed on `HEROKU` - [Application Live Link](https://frozen-mesa-87445.herokuapp.com/)
 
-Link to **GitHub Repo** used for application development - [Application GitHub Repo](https://drkittendorf.github.io/11-note-taker/)
+Link to **GitHub Repo** used for application development - [Application GitHub Repo](https://drkittendorf.github.io/note-taker/)
 
 <br>
 
