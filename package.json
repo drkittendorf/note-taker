@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "note taker add and delete notes with db.json and express server",
   "engines": {
-    "node": "12.x"
+    "node": "17.x"
   },
   "main": "server.js",
   "scripts": {
